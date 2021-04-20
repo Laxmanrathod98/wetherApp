@@ -1,0 +1,28 @@
+<div class="text-center "><h1>SETTINGS</h1></div>
+<hr>
+<div class="btn btn-group">
+<label><h4> Add a new location</h4></label>&nbsp;&nbsp;
+<input #inputype type="text">
+<button (click)="onsetItem(inputype.value)" class="btn btn-primary"><b>ADD</b></button><hr>
+</div>
+<hr>
+<div class="btn btn-group">
+<select  #input id="div1">
+    <option ></option> 
+    <option *ngFor="let items of keyData">{{items}}</option>
+</select>
+<button (click)="onDelete(input.value)" class="btn btn-danger"><b>Delete</b></button><br><hr>
+</div>
+<hr>
+<div class="btn btn-group">
+<select  #inputdefault id="div1" [(ngModel)]="defaultValue" >
+    <option ></option>
+    <option *ngFor="let items of keyData" [value]="items">{{items}}</option>
+</select>
+<button (click)="onsetDefault(inputdefault.value)" class="btn btn-success"><b>Default</b></button>
+</div>
+<hr>
+<div>
+    <button (click)="onCelsius()" class="btn btn-primary">C,M/s</button>&nbsp;
+    <button (click)="onFahrenheit()" class="btn btn-primary">F .KPH</button>
+</div>

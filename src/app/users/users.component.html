@@ -1,0 +1,50 @@
+<div class="btn btn-group">
+<div class="dropdown">
+<select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" #input (click)="onClick(input.value)">
+    <option selected></option>
+    <option class="dropdown-item" *ngFor="let items of keyData">{{items}}</option>    
+</select>
+</div>
+&nbsp;&nbsp;
+<button (click)="changeSetting()" class="btn btn-success">Setting</button>
+</div>
+<div class="text-center">
+    <div>
+        <div>
+            <p>{{name}}</p>
+        </div>
+        <img src="{{icon}}">
+        <div>
+            <p>{{temp_c}}</p>
+            <p>{{pressure_in}}</p>
+            <p>{{ humidity}}</p>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="btn btn-group">
+<div style="margin-left: 400px;">
+<img src="{{forecasticon}}" >
+<div>
+            <p>{{forecastavgtemp_c}}</p>
+            <p >{{forecastfeelslike_c}}</p>
+            <p >{{forecastavgvis_km}}</p>
+</div>
+</div>
+<div style="margin-left: 150px;">
+    <img src="{{forecasticon1}}">
+        <div >
+              <p >{{forecastavgtemp_c1}}</p>
+              <p >{{forecastfeelslike_c1}}</p>
+              <p>{{forecastavgvis_km1}}</p>
+        </div>
+      </div>
+      <div style="margin-left: 150px;">
+        <img src="{{forecasticon2}}">
+        <div >
+            <p>{{forecastavgtemp_c2}}</p>
+            <p >{{forecastfeelslike_c2}}</p>
+            <p>{{forecastavgvis_km2}}</p>
+      </div>
+    </div>
+</div>
